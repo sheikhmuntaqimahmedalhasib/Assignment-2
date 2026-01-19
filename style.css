@@ -49,9 +49,93 @@ nav {
   transition: all 0.4s ease;
 }
 
-.button:hover {
-  background: rgb(0, 0, 0);
+.button2 {
+  padding: 10px 16px;
+  border-radius: 20px;
+  color: #00FF88;
+  display: inline-flex; 
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  border: 1px solid #00FF88;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+
+.button:hover,
+.button2:hover {
+  background: rgb(17, 67, 84);
   color: rgb(255, 255, 255);
   border: none;
   transform: translateX(10px);
+}
+
+
+.hero {
+  height: 90vh;
+  background: url("assets/hero-bg.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.t2h1 {
+  font-size: 50px;
+  margin-bottom: 6px;
+}
+
+.t2h1p {
+  font-size: 15px;
+  margin-bottom: 6px;
+
+}
+
+.podcast-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.podcast-circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: url(assets/hero-circle.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.podcast-circle img {
+  width: 90px;
+}
+
+.new-badge {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  background: #7dff9c;
+  color: #1b1717;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 9px 14px;
+  border-radius: 20px;
 }
