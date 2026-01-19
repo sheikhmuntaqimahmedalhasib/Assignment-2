@@ -139,3 +139,46 @@ nav {
   padding: 9px 14px;
   border-radius: 20px;
 }
+
+.third {
+  height: 75vh;
+  background: #1A0B2E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.t3h1 {
+ font-size: 45px;
+ margin-bottom: 20px;
+}
+
+.t3h1p {
+  margin-bottom: 4px;
+  opacity: 0.8;
+}
+
+.third-line {
+  height: 1px;
+  background: white;
+  opacity: 0.2;
+  margin: 50px auto 50px;
+}
+
+.third-card {
+  display: flex;
+  gap: 200px;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  opacity: 0.8;
+  text-align: center;
+}
+
+.t3h2 {
+  font-size: 40px;
+  margin-bottom: 8px;
+  color: #00FF88;
+}
