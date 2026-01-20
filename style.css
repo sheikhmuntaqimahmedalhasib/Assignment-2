@@ -450,7 +450,7 @@ nav {
 }
 
 .frh1 {
-  font-size:50px;
+  font-size: 45px;
   margin-bottom: 20px;
 }
 
@@ -655,13 +655,14 @@ nav {
 
   .footer {
     height: auto;
-    padding: 60px 20px;
+    width: 100%;
+    padding: 18px;
   }
 
   .footer-social {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 12px;
     justify-items: center;
   }
 }
