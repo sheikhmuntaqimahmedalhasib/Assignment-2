@@ -511,7 +511,6 @@ nav {
     border-radius: 2px;
   }
 
-  /* Nav links hidden initially */
   .nav-links {
     position: absolute;
     top: 60px;
@@ -529,12 +528,10 @@ nav {
     text-align: center;
   }
 
-  /* Show nav-links when hamburger checked */
   #menu-toggle:checked + .hamburger + .nav-links {
     display: flex;
   }
 
-  /* Hide subscribe button on mobile */
   nav > div:last-child {
     display: none;
   }
