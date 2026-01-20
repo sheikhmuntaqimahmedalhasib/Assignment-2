@@ -23,13 +23,30 @@ nav {
 }
 
 .nav-links a {
+  position: relative;
   text-decoration: none;
   color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: rgb(185, 255, 33);
+  transition: width 0.35s ease;
 }
 
 .nav-links a:hover {
   color: rgb(185, 255, 33);
-  cursor: pointer;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .button {
@@ -92,7 +109,7 @@ nav {
 }
 
 .t2h1 {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 6px;
 }
 
@@ -421,7 +438,7 @@ nav {
     font-size: 16px;
 }
 
-.soical-icon img {
+.social-icon img {
     width: 25px;
     height: 20px;
 }
@@ -441,4 +458,143 @@ nav {
 .copyright {
     font-size: 15px;
     opacity: 0.8;
+}
+
+
+
+@media (max-width: 576px) {
+
+  /* ===== HEADER / NAV ===== */
+  .header {
+    padding: 16px 20px;
+  }
+
+  nav {
+    flex-direction: row;
+  }
+
+  .nav-links {
+    display: none; /* hamburger পরে */
+  }
+
+  .button {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .podcast-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .podcast-circle img {
+    width: 70px;
+  }
+  
+  .new-badge {
+    right: 10px;
+    left: auto;
+    top: 10px;
+  }
+
+  .t2h1 {
+    font-size: 32px;
+  }
+
+  .t2h1p {
+    font-size: 14px;
+  }
+
+  /* ===== ABOUT ===== */
+  .third {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .t3h1 {
+    font-size: 32px;
+  }
+
+  .third-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    text-align: center;
+  }
+
+  .third-card > div {
+    width: 100%;
+  }
+
+  /* ===== WHY CHOOSE ===== */
+  .forth {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .f4 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "ff1"
+      "ff2"
+      "ff3"
+      "ff4"
+      "ff5";
+  }
+
+  .f4h1 {
+    font-size: 32px;
+  }
+
+  /* ===== FEATURED EPISODES ===== */
+  .fifth {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .f5fea {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .f5card {
+    width: 100%;
+    max-width: 340px;
+  }
+
+  /* ===== HOST ===== */
+  .f5abouthost {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .f5host img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  /* ===== FOOTER ===== */
+  .footer {
+    height: auto;
+    padding: 60px 20px;
+  }
+
+  .footer-social {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
 }
