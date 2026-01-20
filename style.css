@@ -49,7 +49,6 @@ nav {
   width: 100%;
 }
 
-/* Hamburger icon */
 #menu-toggle {
   display: none;
 }
@@ -61,15 +60,9 @@ nav {
   gap: 5px;
 }
 
-.hamburger span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+.mobile-subscribe {
+    display: none;
 }
-
 
 .button {
   background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
@@ -197,6 +190,14 @@ nav {
   opacity: 0.8;
 }
 
+.t3h1pp {
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    opacity: 0.8;
+}
+
 .third-line {
   height: 1px;
   background: white;
@@ -280,7 +281,7 @@ nav {
 }
 
 .f4p {
-    font-size: 16px;
+    font-size: 15px;
     opacity: 0.7;
     line-height: 1.35;
 }
@@ -347,7 +348,7 @@ nav {
     font-size: 22px;
     margin-bottom: 14px;
     line-height: 1.3;
-
+    
 }
 
 .f5cardp{
@@ -355,7 +356,6 @@ nav {
     line-height: 1.3;
     opacity: 0.8;
     margin-bottom: 14px;
-
 }
 
 .cardtime{
@@ -379,6 +379,7 @@ nav {
     gap: 20px;
     text-align: left;
     margin-top: 30px;
+    max-width: 1100px;
 }
 
 .f5host img {
@@ -487,54 +488,50 @@ nav {
 @media (max-width: 576px) {
 
   .header {
-    padding: 16px 20px;
-  }
+        padding: 16px 20px;
+    }
 
-  nav {
-    position: relative;
-    justify-content: space-between;
-    align-items: center;
-  }
+    nav {
+        position: relative;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
-  }
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+    }
 
-  .hamburger span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    border-radius: 2px;
-  }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #1A0B2E;
+        flex-direction: column;
+        display: none;
+        gap: 20px;
+        padding: 20px;
+        z-index: 1000;
+    }
 
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    width: 100%;
-    background: #1A0B2E;
-    flex-direction: column;
-    display: none;
-    gap: 20px;
-    padding: 20px;
-    z-index: 1000;
-  }
+    .nav-links div {
+        text-align: center;
+    }
 
-  .nav-links div {
-    text-align: center;
-  }
+    #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+    }
 
-  #menu-toggle:checked + .hamburger + .nav-links {
-    display: flex;
-  }
+    .mobile-subscribe {
+        display: block;
+    }
 
-  nav > div:last-child {
-    display: none;
-  }
+    nav > div:last-child {
+        display: none;
+    }
 
   .button {
     padding: 8px 14px;
