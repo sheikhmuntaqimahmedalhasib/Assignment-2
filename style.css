@@ -49,6 +49,28 @@ nav {
   width: 100%;
 }
 
+/* Hamburger icon */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
 .button {
   background: linear-gradient(45deg, #F7E93F, #FB09B4, #9100F8);
   color: white;
@@ -464,17 +486,57 @@ nav {
 
 @media (max-width: 576px) {
 
-  /* ===== HEADER / NAV ===== */
   .header {
     padding: 16px 20px;
   }
 
   nav {
-    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
   }
 
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+  }
+
+  /* Nav links hidden initially */
   .nav-links {
-    display: none; /* hamburger পরে */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #1A0B2E;
+    flex-direction: column;
+    display: none;
+    gap: 20px;
+    padding: 20px;
+    z-index: 1000;
+  }
+
+  .nav-links div {
+    text-align: center;
+  }
+
+  /* Show nav-links when hamburger checked */
+  #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+
+  /* Hide subscribe button on mobile */
+  nav > div:last-child {
+    display: none;
   }
 
   .button {
@@ -482,7 +544,8 @@ nav {
     font-size: 14px;
   }
 
-  /* ===== HERO ===== */
+
+
   .hero {
     height: auto;
     padding: 60px 20px;
@@ -498,7 +561,7 @@ nav {
   }
   
   .new-badge {
-    right: 10px;
+    right: 2px;
     left: auto;
     top: 10px;
   }
@@ -511,7 +574,8 @@ nav {
     font-size: 14px;
   }
 
-  /* ===== ABOUT ===== */
+
+  
   .third {
     height: auto;
     padding: 60px 20px;
@@ -532,7 +596,8 @@ nav {
     width: 100%;
   }
 
-  /* ===== WHY CHOOSE ===== */
+  
+
   .forth {
     height: auto;
     padding: 60px 20px;
@@ -552,7 +617,8 @@ nav {
     font-size: 32px;
   }
 
-  /* ===== FEATURED EPISODES ===== */
+
+  
   .fifth {
     height: auto;
     padding: 60px 20px;
@@ -568,7 +634,8 @@ nav {
     max-width: 340px;
   }
 
-  /* ===== HOST ===== */
+
+
   .f5abouthost {
     flex-direction: column;
     text-align: center;
@@ -584,7 +651,8 @@ nav {
     justify-content: center;
   }
 
-  /* ===== FOOTER ===== */
+
+
   .footer {
     height: auto;
     padding: 60px 20px;
@@ -596,5 +664,4 @@ nav {
     gap: 20px;
     justify-items: center;
   }
-
 }
