@@ -665,4 +665,8 @@ nav {
     gap: 12px;
     justify-items: center;
   }
+
+  .copyright {
+    font-size: 14px;
+  }
 }
